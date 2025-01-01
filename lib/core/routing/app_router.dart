@@ -22,31 +22,31 @@ class AppRouter {
           type: PageTransitionType.fade,
           child: const SplashView(),
           settings: settings,
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 700),
           curve: Curves.easeInOut,
         );
 
       case Routes.signinView:
         return PageTransition(
-          type: PageTransitionType.leftToRightWithFade,
+          type: PageTransitionType.fade,
           child: BlocProvider(
             create: (context) => getIt<LoginCubit>(),
             child: const SigninView(),
           ),
           settings: settings,
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 700),
           curve: Curves.easeInOut,
         );
 
       case Routes.signupView:
         return PageTransition(
-          type: PageTransitionType.rightToLeftWithFade,
+          type: PageTransitionType.fade,
           child: BlocProvider(
             create: (context) => getIt<SignupCubit>(),
             child: const SignupView(),
           ),
           settings: settings,
-          duration: const Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 700),
           curve: Curves.easeInOut,
         );
 

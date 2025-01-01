@@ -1,15 +1,15 @@
-# Sprints Shopping App
+# Sprints Shopping App with Animation
 
-Welcome to **Sprints Shopping App**, a Flutter project designed to showcase a simple yet elegant grocery shopping app. This project demonstrates the use of various Flutter widgets and packages to create a visually appealing and functional user interface.
+Welcome to **Sprints Shopping App with Animation**, a Flutter project designed to showcase a simple yet elegant grocery shopping app. This project demonstrates the use of various Flutter widgets and packages to create a visually appealing and functional user interface.
 
 ## Screenshots
 
-| Output                     |
-| -------------------------- |
+| Output                                                                                       |
+| -------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/user-attachments/assets/4c7b9d3f-37e5-49aa-84dc-d1d87e61df8e"/> |
 
-| Splash                     | Signin                     | Signup                     | Home                       | Adding to Cart             |
-| -------------------------- | -------------------------- | -------------------------- | -------------------------- | -------------------------- |
+| Splash                                                                                       | Signin                                                                                       | Signup                                                                                       | Home                                                                                         | Adding to Cart                                                                               |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/user-attachments/assets/27ad281a-4d6b-4d93-8401-52f19159fc90"/> | <img src="https://github.com/user-attachments/assets/d2a658b2-0159-4c3c-9b1a-235c70a9a4f1"/> | <img src="https://github.com/user-attachments/assets/2a514191-61d7-45d4-80b6-58cf923e0bed"/> | <img src="https://github.com/user-attachments/assets/872ef61c-0d43-4220-9230-14aef670e55b"/> | <img src="https://github.com/user-attachments/assets/c5b12af0-dad4-4559-ba96-9d4bb1339545"/> |
 
 ### App Demo 🎥
@@ -45,6 +45,7 @@ Welcome to **Sprints Shopping App**, a Flutter project designed to showcase a si
 - **[get_it](https://pub.dev/packages/get_it)**: For dependency injection.
 - **[freezed](https://pub.dev/packages/freezed)**: For code generation.
 - **[freezed_annotation](https://pub.dev/packages/freezed_annotation)**: For annotations used with Freezed.
+- **[page_transition](https://pub.dev/packages/page_transition)**: For page transition animations.
 
 ## Getting Started
 
@@ -52,7 +53,7 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/OmarAmeer96/Sprints-Shopping-App.git
+   git clone https://github.com/OmarAmeer96/Sprints-Shopping-App-with-Animation.git
    ```
 2. **Navigate to the project directory**:
    ```sh
