@@ -24,15 +24,12 @@ class LoginBlocListener extends StatelessWidget {
               context: context,
               builder: (context) => const Center(
                 child: LoadingAnimation(),
-                // child: CircularProgressIndicator(
-                //   color: ColorsManager.mainBlue,
-                // ),
               ),
             );
           },
           success: (loginResponse) {
             context.pop();
-            context.pushNamed(Routes.homeView);
+            Navigator.pushReplacementNamed(context, Routes.homeView);
           },
           error: (error) {
             context.pop();

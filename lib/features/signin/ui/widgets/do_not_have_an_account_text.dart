@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sprints_shopping_app_with_animation/core/helpers/extensions.dart';
 import 'package:sprints_shopping_app_with_animation/core/routing/routes.dart';
 import 'package:sprints_shopping_app_with_animation/core/theming/colors_manager.dart';
 import 'package:sprints_shopping_app_with_animation/core/theming/font_family_helper.dart';
@@ -34,7 +33,7 @@ class DontHaveAccountText extends StatelessWidget {
             ),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                context.pushReplacementNamed(Routes.signupView);
+                Navigator.pushNamed(context, Routes.signupView);
               },
           ),
         ],

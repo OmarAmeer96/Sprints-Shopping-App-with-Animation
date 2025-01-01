@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:sprints_shopping_app_with_animation/core/di/dependency_injection.dart';
 import 'package:sprints_shopping_app_with_animation/core/routing/routes.dart';
 import 'package:sprints_shopping_app_with_animation/features/signin/logic/login_cubit/login_cubit.dart';
@@ -17,38 +18,50 @@ class AppRouter {
 
     switch (settings.name) {
       case Routes.splashView:
-        return MaterialPageRoute(
-          builder: (_) => const SplashView(),
+        return PageTransition(
+          type: PageTransitionType.fade,
+          child: const SplashView(),
+          settings: settings,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
         );
 
       case Routes.signinView:
-        return MaterialPageRoute(
-          builder: (_) => BlocProvider(
+        return PageTransition(
+          type: PageTransitionType.leftToRightWithFade,
+          child: BlocProvider(
             create: (context) => getIt<LoginCubit>(),
             child: const SigninView(),
           ),
+          settings: settings,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
         );
 
       case Routes.signupView:
-        return MaterialPageRoute(
-          builder: (_) => BlocProvider(
+        return PageTransition(
+          type: PageTransitionType.rightToLeftWithFade,
+          child: BlocProvider(
             create: (context) => getIt<SignupCubit>(),
             child: const SignupView(),
           ),
+          settings: settings,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
         );
-
-      // case Routes.mainView:
-      //   return MaterialPageRoute(
-      //     builder: (_) => BlocProvider(
-      //       create: (context) => getIt<HomeCubit>(),
-      //       child: const MainView(),
-      //     ),
-      //   );
 
       case Routes.homeView:
-        return MaterialPageRoute(
-          builder: (_) => const HomeView(),
+        return PageTransition(
+          type: PageTransitionType.fade,
+          child: const HomeView(),
+          settings: settings,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
         );
+
+      //? How to use:
+      // Navigator.pushReplacementNamed(context, Routes.homeView);
+
       default:
         return null;
     }

@@ -1,4 +1,3 @@
-import 'package:sprints_shopping_app_with_animation/core/helpers/extensions.dart';
 import 'package:sprints_shopping_app_with_animation/core/routing/routes.dart';
 import 'package:sprints_shopping_app_with_animation/core/theming/colors_manager.dart';
 import 'package:sprints_shopping_app_with_animation/core/theming/font_family_helper.dart';
@@ -34,7 +33,7 @@ class AlreadyHaveAccountText extends StatelessWidget {
             ),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                context.pushReplacementNamed(Routes.signinView);
+                Navigator.pushNamed(context, Routes.signinView);
               },
           ),
         ],
